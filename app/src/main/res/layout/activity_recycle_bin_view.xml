@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClick"
+            type="gallery.photoapp.gallerypro.photoviewer.RecycleBinViewActivity.MyClickHandlers" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RecycleBinViewActivity">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentTop="true">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="?actionBarSize"
+                    android:layout_height="match_parent"
+                    android:onClick="@{onClick::onBackListener}"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/ic_back" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_toRightOf="@+id/imgBack">
+
+                    <TextView
+                        android:id="@+id/tv_imgName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:marqueeRepeatLimit="marquee_forever"
+                        android:maxLines="1"
+                        android:text="@string/app_name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <TextView
+                        android:id="@+id/tv_DateTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_imgName"
+                        android:marqueeRepeatLimit="1"
+                        android:maxLines="1"
+                        android:text="21st December 8:00pm"
+                        android:textSize="@dimen/_8sdp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/imgViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/llBottom"
+                android:layout_below="@+id/rl_toolbar" />
+
+            <LinearLayout
+                android:id="@+id/llBottom"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <ImageView
+                    android:id="@+id/imgRestore"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:onClick="@{onClick::onRestoreClick}"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/ic_restore" />
+
+
+                <ImageView
+                    android:id="@+id/imgDelete"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:onClick="@{onClick::onDeleteClick}"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/ic_delete" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

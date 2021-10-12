@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Gallery Viewer</string>
+    <string name="vw_rationale_storage">Need Reading Storage Permission for Picking Files</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="number_one">1</string>
+    <string name="number_two">2</string>
+    <string name="number_three">3</string>
+    <string name="number_four">4</string>
+    <string name="number_five">5</string>
+    <string name="number_six">6</string>
+    <string name="number_seven">7</string>
+    <string name="number_eight">8</string>
+    <string name="number_nine">9</string>
+    <string name="forget_passowrd">Forgot\nPassword?</string>
+    <string name="number_zero">0</string>
+
+    <string name="password_protect">If you want to prevent some important photos to access by unauthorized person then set security lock.</string>
+    <string name="view_types">View Types</string>
+    <string name="thumbnail_columns">Thumbnail Columns</string>
+
+    <string name="favourite">Favourite</string>
+    <string name="add_to_album">Add To Album</string>
+    <string name="start_slideshow">Start SlideShow</string>
+    <string name="set_as_wallpaper">Set as wallpaper</string>
+    <string name="rename">Rename</string>
+    <string name="print">Print</string>
+    <string name="details">Details</string>
+    <string name="create_an_album">Create an album</string>
+    <string name="private_album">Private album</string>
+    <string name="album_name">Album Name</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="adding_photos">Adding Photos</string>
+    <string name="move">Move</string>
+    <string name="copy">Copy</string>
+    <string name="list">List</string>
+    <string name="grid">Grid</string>
+    <string name="thumbnail_column">Thumbnail Column</string>
+    <string name="_2_column">2 Column</string>
+    <string name="_3_column">3 Column</string>
+    <string name="_4_column">4 Column</string>
+    <string name="sorting">Sorting</string>
+    <string name="no_of_photos">No Of Photos</string>
+    <string name="last_modified_date">Last modified date</string>
+    <string name="name">Name</string>
+    <string name="ascending">Ascending</string>
+    <string name="descending">Descending</string>
+    <string name="slideshow_timer">Slideshow Timer</string>
+
+    <string name="_1_sec">1 sec</string>
+    <string name="_2_sec">2 Sec</string>
+    <string name="_3_sec">3 Sec</string>
+    <string name="_4_sec">4 Sec</string>
+    <string name="_5_sec">5 Sec</string>
+    <string name="rename_album">Rename Album</string>
+    <string name="image_name">Image Name</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="no_data_available">No data available</string>
+
+    <!--    Test ID's-->
+    <!--        <string name="banner_ad">ca-app-pub-3940256099942544/6300978111</string>-->
+    <!--        <string name="app_id">ca-app-pub-4293491867572780~3791221331</string>-->
+
+    <!--    Live ID's-->
+    <string name="banner_ad">ca-app-pub-4293491867572780/8851976321</string>
+    <string name="app_id">ca-app-pub-4293491867572780~3791221331</string>
+    <string name="recycle_bin">Recycle bin</string>
+</resources>

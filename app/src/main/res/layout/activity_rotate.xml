@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="onClickListener"
+            type="gallery.photoapp.gallerypro.photoviewer.RotateActivity.MyClickHandlers" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:custom="http://schemas.android.com/apk/res-auto"
+        xmlns:gpb="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RotateActivity">
+
+        <LinearLayout
+            android:id="@+id/llBottom"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_55sdp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgImages">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="4.0">
+
+                <LinearLayout
+                    android:id="@+id/llLeftRotate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:onClick="@{onClickListener::onLeftRotate}"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgLeftRotate"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.3"
+                        android:src="@drawable/ic_left_rotate" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:text="Left"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/llRightRotate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:onClick="@{onClickListener::onRightRotate}"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgRightRotate"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.3"
+                        android:src="@drawable/ic_right_rotate" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:text="Right"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llVerticalRotate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:onClick="@{onClickListener::onVerticalRotate}"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgVertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.3"
+                        android:src="@drawable/ic_vertical" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:text="Right"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llHorizontalRotate"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:onClick="@{onClickListener::onHorizontalRotate}"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imgHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.3"
+                        android:src="@drawable/ic_horizontal" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.7"
+                        android:gravity="center"
+                        android:text="Right"
+                        android:textSize="@dimen/_8sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.isseiaoki.simplecropview.CropImageView
+            android:id="@+id/imgImages"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/llBottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rl_toolbar"
+            custom:scv_crop_mode="fit_image"
+            custom:scv_frame_color="@color/white"
+            custom:scv_frame_stroke_weight="1dp"
+            custom:scv_guide_show_mode="show_always"
+            custom:scv_guide_stroke_weight="1dp"
+            custom:scv_handle_color="@color/purple_700"
+            custom:scv_handle_show_mode="show_always"
+            custom:scv_handle_size="14dp"
+            custom:scv_min_frame_size="50dp"
+            custom:scv_touch_padding="8dp" />
+
+        <RelativeLayout
+            android:id="@+id/rl_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:onClick="@{onClickListener::onBackListener}"
+                android:padding="@dimen/_13sdp"
+                android:src="@drawable/ic_back" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/imgDone"
+                android:layout_toRightOf="@+id/imgBack">
+
+                <TextView
+                    android:id="@+id/tv_imgName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:maxLines="1"
+                    android:text="Rotate"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imgDone"
+                android:layout_width="?actionBarSize"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:onClick="@{onClickListener::onDoneListener}"
+                android:padding="@dimen/_14sdp"
+                android:src="@drawable/ic_done" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#C3000000"
+            android:visibility="gone">
+
+            <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+                android:id="@+id/google_progress"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                gpb:type="chrome_floating_circles" />
+
+        </RelativeLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

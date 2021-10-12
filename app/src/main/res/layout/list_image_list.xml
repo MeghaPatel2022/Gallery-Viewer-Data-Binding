@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="imageFile"
+            type="gallery.photoapp.gallerypro.photoviewer.model.ImageFile" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/imgAlbum"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:background="#C4C4C4"
+            android:outlineProvider="background"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:id="@+id/ll_right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_toRightOf="@+id/imgAlbum"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_image_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_8sdp"
+                android:text="@{imageFile.name}"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/tv_image_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_8sdp"
+                android:text="@{imageFile.date}"
+                android:textSize="@dimen/_9sdp" />
+
+            <TextView
+                android:id="@+id/tv_image_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_8sdp"
+                android:text="54 Mb"
+                android:textSize="@dimen/_9sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:layout_below="@+id/imgAlbum"
+            android:layout_marginTop="5dp"
+            android:background="@color/devider_color" />
+
+    </RelativeLayout>
+</layout>
